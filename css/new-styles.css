@@ -1,0 +1,11 @@
+#sticky_catalog .catalog-list {
+    display: none;
+}
+
+#sticky_catalog.show_catalog .catalog-list {
+    display: block;
+}
+
+h4.catalog-header {
+    cursor: pointer;
+}
