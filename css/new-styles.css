@@ -9,3 +9,7 @@
 h4.catalog-header {
     cursor: pointer;
 }
+
+a.article-tab {
+    text-decoration: underline;
+}
