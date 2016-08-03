@@ -1267,46 +1267,6 @@ select {
     border: 1px solid #dfe0e0;
 }
 
-.main-slider {
-    overflow: hidden;
-    position: relative;
-}
-
-.main-slider img {
-    max-width: 100%;
-}
-
-.main-slider .slide {
-    display: inline-block;
-    float: left
-}
-
-.main-slider .owl-dots {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-}
-
-.main-slider .owl-dots .owl-dot {
-    display: inline-block;
-    margin-right: 8px;
-    width: 8px;
-    height: 8px;
-    background-color: #fff;
-    -webkit-border-radius: 1px;
-    border-radius: 1px;
-    z-index: 1;
-    cursor: pointer;
-}
-
-.main-slider .owl-dots .owl-dot.active {
-    background-color: #f90;
-}
-
-.main-slider .owl-nav.disabled {
-    display: none;
-}
-
 .inner-page .widget.catalog {
     width: 220px;
     float: left;
