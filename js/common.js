@@ -3,12 +3,20 @@ $(function () {
 		$("#main_menu_stick,#callback_sticky,#cart_md_sticky").removeAttr("style");	
 	}
 	
+	
 	function posColorMenu(){
 		var doc_margin=(parseFloat($(document).outerWidth())-parseFloat($(".main-content").outerWidth()))/2;
 		$("#main_menu_stick.sticky").css("left",parseFloat(doc_margin+192)+'px');
 		$("#callback_sticky.sticky").css("left",parseFloat(doc_margin+192+192)+'px');
 		$("#cart_md_sticky.sticky").css({"left":parseFloat(doc_margin+192+192+192)+'px',"right":"none"});
 	}
+	$('body').on("click", ".show_all_tags a.show_tags_link", function () {
+		$(this).hide().closest(".tags_block").css("height","initial").find(".show_all_tags").css("position","static").find(".hide_tags_link").show();
+			
+    });
+	$('body').on("click", ".show_all_tags a.hide_tags_link", function () {
+		$(this).hide().closest(".tags_block").css("height","140px").find(".show_all_tags").css({"position":"absolute","bottom":"0"}).find(".show_tags_link").show();
+    });
 
     $('body').on("click", ".callback", function () {
         $(this).magnificPopup({
@@ -332,9 +340,9 @@ $(function () {
             }
         }
     });
-
+	
     // Product Carousel
-    $(".prod-carousel .products").owlCarousel({
+    $(".products-sect.prod-carousel .products").owlCarousel({
         loop: true,
 		autoplay:true,
         items: 3,
@@ -350,6 +358,28 @@ $(function () {
             },
             768: {
                 items: 3
+            }
+        }
+    });
+	
+	$(".relatet_product_block.prod-carousel .products").owlCarousel({
+        loop: true,
+		autoplay:true,
+        items: 4,
+        margin: 12,
+        itemClass: "product-item",
+        nav: true,
+        navText: ["<i class='arrow-slide-left'></i>", "<i class='arrow-slide-right'></i>"],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 3
+            },
+			1024: {
+                items: 4
             }
         }
     });

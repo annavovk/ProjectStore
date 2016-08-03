@@ -4,6 +4,15 @@ body iframe{
 body div iframe{
 	display:block;
 }
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.width50{
+	width:50%;
+}
 .clearfix:before, .main-content .content:after {
     clear: both;
 }
@@ -846,9 +855,6 @@ img {
     right: 0;
     left: auto;
 }
-.left{
-	float:left;
-}
 .main-menu li.sfHover .sf-with-ul:after {
     -webkit-transform: rotate(225deg);
     -ms-transform: rotate(225deg);
@@ -1135,7 +1141,7 @@ img {
 }
 
 .search-line {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .search-line form {
@@ -1465,4 +1471,66 @@ select {
     border-radius: 3px;
     font-size: 14px;
     padding: 4px 10px;
+}
+.instruction_product {
+	margin:40px 0;
+}
+.instruction_product ul{
+	list-style:none;
+	margin-left:60px;
+	padding:0;
+	line-height:1;
+	width:283px;
+}
+.instruction_product ul li:before{
+	content:'—';
+	position:absolute;
+	left:0;
+}
+.instruction_product ul li{
+	margin-bottom:5px;
+	position:relative;
+	padding-left:30px;
+}
+.instruction_product ul li a{
+	color:#007186;
+}
+.spec_price{
+	margin:30px 0;
+}
+.tags_block{
+	overflow:hidden;
+	position:relative;
+	height:140px
+}
+.show_all_tags{
+	position:absolute;
+	bottom:0;
+	text-align:center;
+	z-index:101;
+	width:100%;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 22%, rgba(255,255,255,0.8) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 22%,rgba(255,255,255,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 22%,rgba(255,255,255,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#b3ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+.show_all_tags a{
+	display:block;
+	padding-top:50px;
+	color:#007186;
+}
+.show_all_tags a.hide_tags_link{
+	display:none;
+}
+
+.product-img{
+	text-align:center;
+}
+.relatet_product_block{
+	margin:40px 0;
+}
+.relatet_product_block .product-img{
+	float:left;
+	width:111px;
 }
