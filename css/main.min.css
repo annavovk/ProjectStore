@@ -30,10 +30,7 @@ h2,h3{
     border-bottom: 0 solid #fff;
 	border-radius:none;
 }
-.tab-content > .active{
-	border: 1px solid #888;
-    margin-top: -1px;
-}
+
 .product_description_block  .nav-tabs li a{
 	border:1px solid transparent !important;
 	margin:0;
@@ -131,7 +128,7 @@ h2,h3{
     width: 100%
 }
 
-.mfp-arrow:after, .mfp-arrow:before, .mfp-container:before, .mfp-figure:after, .products-sect-header:after {
+.mfp-arrow:after, .mfp-arrow:before, .mfp-container:before, .mfp-figure:after, {
     content: ''
 }
 
@@ -284,7 +281,7 @@ button::-moz-focus-inner {
     font-family: Arial, Baskerville, monospace
 }
 
-.products-sect .product-info .btn, .products-sect .product-info .price, .products-sect .tabs-menu li.active a, .products-sect-header, .sect-header, .tags li:first-child {
+.products-sect .product-info .btn, .products-sect .product-info .price, .products-sect .tabs-menu li.active a, .sect-header, .tags li:first-child {
     font-family: ClearSansBold, sans-serif
 }
 
@@ -652,25 +649,6 @@ i.rating-star-big-fill {
     position: relative
 }
 
-.products-sect-header {
-    font-size: 1.125em;
-    color: #333;
-    text-transform: uppercase;
-    position: relative;
-    margin: 30px 0;
-}
-
-.products-sect-header:after {
-    display: inline-block;
-    width: 530px;
-    position: absolute;
-    top: 14px;
-    right: 0;
-    height: 1px;
-    background-color: #dfe0e0;
-    margin-left: 20px
-}
-
 .products-sect .product {
     position: relative;
     width: 220px;
@@ -826,15 +804,6 @@ i.rating-star-big-fill {
     line-height: 2.5
 }
 
-.labels .two-lines {
-    display: inline-block;
-    margin-bottom: 3px
-}
-
-.labels .two-lines:after {
-    display: none
-}
-
 .labels .labels-info {
     display: none;
     position: absolute;
@@ -944,10 +913,6 @@ i.rating-star-big-fill {
     display: inline-block
 }
 
-.lider-prod-slider .products-sect-header {
-    margin-bottom: 5px
-}
-
 .btn {
     vertical-align: middle;
     padding: 2px 15px;
@@ -969,6 +934,22 @@ i.rating-star-big-fill {
 .btn-orange:active, .btn-orange:focus {
     color: #fff;
     background-color: #e68a00
+}
+
+.btn-grey {
+    background-color: #f90;
+    color: #fff;
+    border: 0
+}
+
+.btn-grey:hover {
+    color: #fff;
+    background-color: #ffa31a
+}
+
+.btn-grey:active, .btn-grey:focus {
+    color: #fff;
+background-color: #e68a00
 }
 
 .btn-transp {
@@ -1766,7 +1747,7 @@ i.rating-star-big-fill {
     text-align: right
 }
 
-.product-full .info-main-block .product-yes .btns .btn-orange {
+.product-full .info-main-block .product-yes .btns .btn-orange .btn-grey {
     font-size: 1.125em;
     margin-right: 10px;
     padding: 2px 22px
@@ -3471,10 +3452,6 @@ span.grey-color {
     display: block
 }
 
-.reccomend-products .products-sect-header:after {
-    width: 690px
-}
-
 #testimonial-popup {
     position: relative
 }
@@ -3686,10 +3663,6 @@ span.grey-color {
         display: inline-block;
     }
 
-    .products-sect-header::after {
-        width: 370px
-    }
-
     .products-sect .product {
         width: 166px
     }
@@ -3815,7 +3788,7 @@ span.grey-color {
         width: 90px
     }
 
-    .product-full .info-main-block .product-yes .btns .btn-orange {
+    .product-full .info-main-block .product-yes .btns .btn-orange .btn-grey {
         padding: 2px 17px
     }
 
@@ -4074,10 +4047,6 @@ span.grey-color {
     .testimonial-item.jur:last-child {
         display: none
     }
-
-    .reccomend-products .products-sect-header::after {
-        width: 450px
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -4117,9 +4086,6 @@ span.grey-color {
     .top-line .phones li {
         margin-bottom: 2px
     }
-	.products-sect-header{
-		margin:20px 0;
-	}
 	
 	.top-line .callback {
         top: 51px;
@@ -4173,7 +4139,7 @@ span.grey-color {
         box-shadow: -.9px .5px 5px rgba(0, 0, 0, .2)
     }
 
-    .aside, .main-slider, .products-sect .products-sect-header::after, .search-line, .sect-header::after, .sm-menu-header, .widget.banner, .widget.catalog .catalog-list, .widget.gallery, .widget.sertificate {
+    .aside, .main-slider, .products-sect, .search-line, .sect-header::after, .sm-menu-header, .widget.banner, .widget.catalog .catalog-list, .widget.gallery, .widget.sertificate {
         display: none
     }
 
