@@ -10,6 +10,11 @@ h4.catalog-header {
     cursor: pointer;
 }
 
-a.article-tab {
-    text-decoration: underline;
+.article-tab a:hover  {
+    text-decoration: none;
+}
+
+.article-tab a {
+    color: #007488;
+    border-bottom: 1px solid #007488;
 }
