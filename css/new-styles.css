@@ -14,6 +14,37 @@ h4.catalog-header {
     cursor: pointer;
 }
 
+.btn-group .dropdown-menu {
+    display: none;
+}
+
+.filter {
+    border: 1px solid #dfe0e0;
+}
+
+.checkbox {
+    margin-left: 1px;
+
+    border: 1px solid #dfe0e0;
+    cursor: pointer;
+}
+
+.check-brand {
+    width:220px;
+    height:250px;
+    overflow:auto;
+    border: 1px solid #dfe0e0;
+    margin: 0;
+}
+
+.dropdown-list {
+    border: 1px solid #dfe0e0;
+}
+
+.btn-group.open {
+    display: block;
+}
+
 .article-tab a:hover  {
     text-decoration: none;
 }
