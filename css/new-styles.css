@@ -41,6 +41,24 @@ h4.catalog-header {
     border: 1px solid #dfe0e0;
 }
 
+.button-show {
+    width: 200px;
+    padding: 3px 9px;
+    border: 1px solid grey;
+    margin: 5px 5px 5px 0;
+    cursor: pointer;
+    background: dimgrey;
+    color: white;
+}
+
+.button-drop {
+    width: 200px;
+    padding: 3px 9px;
+    border: 1px solid grey;
+    margin: 5px 5px 5px 0;
+    cursor: pointer;
+}
+
 .btn-group.open {
     display: block;
 }
