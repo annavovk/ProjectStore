@@ -81,3 +81,28 @@ h4.catalog-header {
     color: #007488;
     border-bottom: 1px solid #007488;
 }
+
+.search_line_form .dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 200;
+    background-color: white;
+    top: 12px;
+}
+
+.search_line_form .open .dropdown-menu {
+    display: block;
+}
+.search_line_form .open .angle-bottom {
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    top: 14px;
+}
+
+.search_line_form .btn-group {
+    display: inline-block;
+}
+.search_line_form .btn-group li {
+    list-style: none;
+}

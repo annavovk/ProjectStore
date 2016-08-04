@@ -1149,6 +1149,7 @@ img {
     float:left;
     display: inline-block;
     width: 533px;
+    height: 30px;
     background-color: transparent;
     border: 1px solid #dfe0e0;
     -webkit-border-radius: 1px;
@@ -1164,6 +1165,7 @@ img {
     line-height: 1;
     padding: 0 15px;
     width: 299px;
+    float: left;
 }
 
 .search-line .example-search {
@@ -1228,12 +1230,12 @@ img {
 	
 .search-line i.angle-bottom {
     position: absolute;
-    right: 5px;
+    right: 85px;
     top: 10px;
 	cursor:pointer;
 }
-#seach_cat_group{
-	min-width: 151px;
+#search_cat_group{
+	min-width: 157px;
 }
 .search_line_form{
 	float:left;

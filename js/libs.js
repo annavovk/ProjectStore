@@ -62,7 +62,7 @@ window.Modernizr = function (e, t, n) {
 
     function l() {
         p.input = function (n) {
-            for (var r = 0, o = n.length; o > r; r++)j[n[r]] = !!(n[r]in E);
+            for (var r = 0, o = n.length; o > r; r++)j[n[r]] = !!(n[r] in E);
             return j.list && (j.list = !(!t.createElement("datalist") || !e.HTMLDataListElement)), j
         }("autocomplete autofocus list placeholder max min multiple pattern required step".split(" ")), p.inputtypes = function (e) {
             for (var r, o, a, i = 0, c = e.length; c > i; i++)E.setAttribute("type", o = e[i]), r = "text" !== E.type, r && (E.value = x, E.style.cssText = "position:absolute;visibility:hidden;", /^range$/.test(o) && E.style.WebkitAppearance !== n ? (g.appendChild(E), a = t.defaultView, r = a.getComputedStyle && "textfield" !== a.getComputedStyle(E, null).WebkitAppearance && 0 !== E.offsetHeight, g.removeChild(E)) : /^(search|tel)$/.test(o) || (r = /^(url|email)$/.test(o) ? E.checkValidity && E.checkValidity() === !1 : E.value != x)), P[e[i]] = !!r;
@@ -130,11 +130,11 @@ window.Modernizr = function (e, t, n) {
         return !!e.WebGLRenderingContext
     }, M.touch = function () {
         var n;
-        return "ontouchstart"in e || e.DocumentTouch && t instanceof DocumentTouch ? n = !0 : F(["@media (", S.join("touch-enabled),("), v, ")", "{#modernizr{top:9px;position:absolute}}"].join(""), function (e) {
+        return "ontouchstart" in e || e.DocumentTouch && t instanceof DocumentTouch ? n = !0 : F(["@media (", S.join("touch-enabled),("), v, ")", "{#modernizr{top:9px;position:absolute}}"].join(""), function (e) {
             n = 9 === e.offsetTop
         }), n
     }, M.geolocation = function () {
-        return "geolocation"in navigator
+        return "geolocation" in navigator
     }, M.postmessage = function () {
         return !!e.postMessage
     }, M.websqldatabase = function () {
@@ -147,9 +147,9 @@ window.Modernizr = function (e, t, n) {
         return !(!e.history || !history.pushState)
     }, M.draganddrop = function () {
         var e = t.createElement("div");
-        return "draggable"in e || "ondragstart"in e && "ondrop"in e
+        return "draggable" in e || "ondragstart" in e && "ondrop" in e
     }, M.websockets = function () {
-        return "WebSocket"in e || "MozWebSocket"in e
+        return "WebSocket" in e || "MozWebSocket" in e
     }, M.rgba = function () {
         return r("background-color:rgba(150,255,150,.5)"), i(b.backgroundColor, "rgba")
     }, M.hsla = function () {
@@ -181,7 +181,7 @@ window.Modernizr = function (e, t, n) {
         return !!u("transform")
     }, M.csstransforms3d = function () {
         var e = !!u("perspective");
-        return e && "webkitPerspective"in g.style && F("@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}", function (t) {
+        return e && "webkitPerspective" in g.style && F("@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}", function (t) {
             e = 9 === t.offsetLeft && 3 === t.offsetHeight
         }), e
     }, M.csstransitions = function () {
@@ -292,7 +292,7 @@ window.Modernizr = function (e, t, n) {
         !function () {
             try {
                 var e = t.createElement("a");
-                e.innerHTML = "<xyz></xyz>", u = "hidden"in e, l = 1 == e.childNodes.length || function () {
+                e.innerHTML = "<xyz></xyz>", u = "hidden" in e, l = 1 == e.childNodes.length || function () {
                         t.createElement("a");
                         var e = t.createDocumentFragment();
                         return "undefined" == typeof e.cloneNode || "undefined" == typeof e.createDocumentFragment || "undefined" == typeof e.createElement
@@ -2009,8 +2009,8 @@ window.Modernizr = function (e, t, n) {
         style: function (a, b, c, d) {
             if (a && 3 !== a.nodeType && 8 !== a.nodeType && a.style) {
                 var e, f, g, h = m.camelCase(b), i = a.style;
-                if (b = m.cssProps[h] || (m.cssProps[h] = Ub(i, h)), g = m.cssHooks[b] || m.cssHooks[h], void 0 === c)return g && "get"in g && void 0 !== (e = g.get(a, !1, d)) ? e : i[b];
-                if (f = typeof c, "string" === f && (e = Qb.exec(c)) && (c = (e[1] + 1) * e[2] + parseFloat(m.css(a, b)), f = "number"), null != c && c === c && ("number" !== f || m.cssNumber[h] || (c += "px"), k.clearCloneStyle || "" !== c || 0 !== b.indexOf("background") || (i[b] = "inherit"), !(g && "set"in g && void 0 === (c = g.set(a, c, d)))))try {
+                if (b = m.cssProps[h] || (m.cssProps[h] = Ub(i, h)), g = m.cssHooks[b] || m.cssHooks[h], void 0 === c)return g && "get" in g && void 0 !== (e = g.get(a, !1, d)) ? e : i[b];
+                if (f = typeof c, "string" === f && (e = Qb.exec(c)) && (c = (e[1] + 1) * e[2] + parseFloat(m.css(a, b)), f = "number"), null != c && c === c && ("number" !== f || m.cssNumber[h] || (c += "px"), k.clearCloneStyle || "" !== c || 0 !== b.indexOf("background") || (i[b] = "inherit"), !(g && "set" in g && void 0 === (c = g.set(a, c, d)))))try {
                     i[b] = c
                 } catch (j) {
                 }
@@ -2018,7 +2018,7 @@ window.Modernizr = function (e, t, n) {
         },
         css: function (a, b, c, d) {
             var e, f, g, h = m.camelCase(b);
-            return b = m.cssProps[h] || (m.cssProps[h] = Ub(a.style, h)), g = m.cssHooks[b] || m.cssHooks[h], g && "get"in g && (f = g.get(a, !0, c)), void 0 === f && (f = Jb(a, b, d)), "normal" === f && b in Sb && (f = Sb[b]), "" === c || c ? (e = parseFloat(f), c === !0 || m.isNumeric(e) ? e || 0 : f) : f
+            return b = m.cssProps[h] || (m.cssProps[h] = Ub(a.style, h)), g = m.cssHooks[b] || m.cssHooks[h], g && "get" in g && (f = g.get(a, !0, c)), void 0 === f && (f = Jb(a, b, d)), "normal" === f && b in Sb && (f = Sb[b]), "" === c || c ? (e = parseFloat(f), c === !0 || m.isNumeric(e) ? e || 0 : f) : f
         }
     }), m.each(["height", "width"], function (a, b) {
         m.cssHooks[b] = {
@@ -2136,7 +2136,7 @@ window.Modernizr = function (e, t, n) {
             n.always(function () {
                 h.unqueued--, m.queue(a, "fx").length || h.empty.fire()
             })
-        })), 1 === a.nodeType && ("height"in b || "width"in b) && (c.overflow = [p.overflow, p.overflowX, p.overflowY], j = m.css(a, "display"), l = "none" === j ? m._data(a, "olddisplay") || Fb(a.nodeName) : j, "inline" === l && "none" === m.css(a, "float") && (k.inlineBlockNeedsLayout && "inline" !== Fb(a.nodeName) ? p.zoom = 1 : p.display = "inline-block")), c.overflow && (p.overflow = "hidden", k.shrinkWrapBlocks() || n.always(function () {
+        })), 1 === a.nodeType && ("height" in b || "width" in b) && (c.overflow = [p.overflow, p.overflowX, p.overflowY], j = m.css(a, "display"), l = "none" === j ? m._data(a, "olddisplay") || Fb(a.nodeName) : j, "inline" === l && "none" === m.css(a, "float") && (k.inlineBlockNeedsLayout && "inline" !== Fb(a.nodeName) ? p.zoom = 1 : p.display = "inline-block")), c.overflow && (p.overflow = "hidden", k.shrinkWrapBlocks() || n.always(function () {
             p.overflow = c.overflow[0], p.overflowX = c.overflow[1], p.overflowY = c.overflow[2]
         }));
         for (d in b)if (e = b[d], ac.exec(e)) {
@@ -2147,7 +2147,7 @@ window.Modernizr = function (e, t, n) {
             o[d] = r && r[d] || m.style(a, d)
         } else j = void 0;
         if (m.isEmptyObject(o))"inline" === ("none" === j ? Fb(a.nodeName) : j) && (p.display = j); else {
-            r ? "hidden"in r && (q = r.hidden) : r = m._data(a, "fxshow", {}), f && (r.hidden = !q), q ? m(a).show() : n.done(function () {
+            r ? "hidden" in r && (q = r.hidden) : r = m._data(a, "fxshow", {}), f && (r.hidden = !q), q ? m(a).show() : n.done(function () {
                 m(a).hide()
             }), n.done(function () {
                 var b;
@@ -2160,7 +2160,7 @@ window.Modernizr = function (e, t, n) {
 
     function jc(a, b) {
         var c, d, e, f, g;
-        for (c in a)if (d = m.camelCase(c), e = b[d], f = a[c], m.isArray(f) && (e = f[1], f = a[c] = f[0]), c !== d && (a[d] = f, delete a[c]), g = m.cssHooks[d], g && "expand"in g) {
+        for (c in a)if (d = m.camelCase(c), e = b[d], f = a[c], m.isArray(f) && (e = f[1], f = a[c] = f[0]), c !== d && (a[d] = f, delete a[c]), g = m.cssHooks[d], g && "expand" in g) {
             f = g.expand(f), delete a[d];
             for (c in f)c in a || (a[c] = f[c], b[c] = e)
         } else b[d] = e
@@ -2291,9 +2291,9 @@ window.Modernizr = function (e, t, n) {
                     var e;
                     1 === this.nodeType && (e = d ? a.call(this, c, m(this).val()) : a, null == e ? e = "" : "number" == typeof e ? e += "" : m.isArray(e) && (e = m.map(e, function (a) {
                         return null == a ? "" : a + ""
-                    })), b = m.valHooks[this.type] || m.valHooks[this.nodeName.toLowerCase()], b && "set"in b && void 0 !== b.set(this, e, "value") || (this.value = e))
+                    })), b = m.valHooks[this.type] || m.valHooks[this.nodeName.toLowerCase()], b && "set" in b && void 0 !== b.set(this, e, "value") || (this.value = e))
                 });
-                if (e)return b = m.valHooks[e.type] || m.valHooks[e.nodeName.toLowerCase()], b && "get"in b && void 0 !== (c = b.get(e, "value")) ? c : (c = e.value, "string" == typeof c ? c.replace(lc, "") : null == c ? "" : c)
+                if (e)return b = m.valHooks[e.type] || m.valHooks[e.nodeName.toLowerCase()], b && "get" in b && void 0 !== (c = b.get(e, "value")) ? c : (c = e.value, "string" == typeof c ? c.replace(lc, "") : null == c ? "" : c)
             }
         }
     }), m.extend({
@@ -2342,7 +2342,7 @@ window.Modernizr = function (e, t, n) {
     }), m.extend({
         attr: function (a, b, c) {
             var d, e, f = a.nodeType;
-            if (a && 3 !== f && 8 !== f && 2 !== f)return typeof a.getAttribute === K ? m.prop(a, b, c) : (1 === f && m.isXMLDoc(a) || (b = b.toLowerCase(), d = m.attrHooks[b] || (m.expr.match.bool.test(b) ? nc : mc)), void 0 === c ? d && "get"in d && null !== (e = d.get(a, b)) ? e : (e = m.find.attr(a, b), null == e ? void 0 : e) : null !== c ? d && "set"in d && void 0 !== (e = d.set(a, c, b)) ? e : (a.setAttribute(b, c + ""), c) : void m.removeAttr(a, b))
+            if (a && 3 !== f && 8 !== f && 2 !== f)return typeof a.getAttribute === K ? m.prop(a, b, c) : (1 === f && m.isXMLDoc(a) || (b = b.toLowerCase(), d = m.attrHooks[b] || (m.expr.match.bool.test(b) ? nc : mc)), void 0 === c ? d && "get" in d && null !== (e = d.get(a, b)) ? e : (e = m.find.attr(a, b), null == e ? void 0 : e) : null !== c ? d && "set" in d && void 0 !== (e = d.set(a, c, b)) ? e : (a.setAttribute(b, c + ""), c) : void m.removeAttr(a, b))
         }, removeAttr: function (a, b) {
             var c, d, e = 0, f = b && b.match(E);
             if (f && 1 === a.nodeType)while (c = f[e++])d = m.propFix[c] || c, m.expr.match.bool.test(c) ? rc && qc || !pc.test(c) ? a[d] = !1 : a[m.camelCase("default-" + c)] = a[d] = !1 : m.attr(a, c, ""), a.removeAttribute(qc ? c : d)
@@ -2417,7 +2417,7 @@ window.Modernizr = function (e, t, n) {
     }), m.extend({
         propFix: {"for": "htmlFor", "class": "className"}, prop: function (a, b, c) {
             var d, e, f, g = a.nodeType;
-            if (a && 3 !== g && 8 !== g && 2 !== g)return f = 1 !== g || !m.isXMLDoc(a), f && (b = m.propFix[b] || b, e = m.propHooks[b]), void 0 !== c ? e && "set"in e && void 0 !== (d = e.set(a, c, b)) ? d : a[b] = c : e && "get"in e && null !== (d = e.get(a, b)) ? d : a[b]
+            if (a && 3 !== g && 8 !== g && 2 !== g)return f = 1 !== g || !m.isXMLDoc(a), f && (b = m.propFix[b] || b, e = m.propHooks[b]), void 0 !== c ? e && "set" in e && void 0 !== (d = e.set(a, c, b)) ? d : a[b] = c : e && "get" in e && null !== (d = e.get(a, b)) ? d : a[b]
         }, propHooks: {
             tabIndex: {
                 get: function (a) {
@@ -2554,7 +2554,7 @@ window.Modernizr = function (e, t, n) {
             i.unshift(g);
             break
         }
-        if (i[0]in c)f = i[0]; else {
+        if (i[0] in c)f = i[0]; else {
             for (g in c) {
                 if (!i[0] || a.converters[g + " " + i[0]]) {
                     f = g;
@@ -2767,7 +2767,7 @@ window.Modernizr = function (e, t, n) {
     var Wc = 0, Xc = {}, Yc = m.ajaxSettings.xhr();
     a.attachEvent && a.attachEvent("onunload", function () {
         for (var a in Xc)Xc[a](void 0, !0)
-    }), k.cors = !!Yc && "withCredentials"in Yc, Yc = k.ajax = !!Yc, Yc && m.ajaxTransport(function (a) {
+    }), k.cors = !!Yc && "withCredentials" in Yc, Yc = k.ajax = !!Yc, Yc && m.ajaxTransport(function (a) {
         if (!a.crossDomain || k.cors) {
             var b;
             return {
@@ -2886,7 +2886,7 @@ window.Modernizr = function (e, t, n) {
     m.offset = {
         setOffset: function (a, b, c) {
             var d, e, f, g, h, i, j, k = m.css(a, "position"), l = m(a), n = {};
-            "static" === k && (a.style.position = "relative"), h = l.offset(), f = m.css(a, "top"), i = m.css(a, "left"), j = ("absolute" === k || "fixed" === k) && m.inArray("auto", [f, i]) > -1, j ? (d = l.position(), g = d.top, e = d.left) : (g = parseFloat(f) || 0, e = parseFloat(i) || 0), m.isFunction(b) && (b = b.call(a, c, h)), null != b.top && (n.top = b.top - h.top + g), null != b.left && (n.left = b.left - h.left + e), "using"in b ? b.using.call(a, n) : l.css(n)
+            "static" === k && (a.style.position = "relative"), h = l.offset(), f = m.css(a, "top"), i = m.css(a, "left"), j = ("absolute" === k || "fixed" === k) && m.inArray("auto", [f, i]) > -1, j ? (d = l.position(), g = d.top, e = d.left) : (g = parseFloat(f) || 0, e = parseFloat(i) || 0), m.isFunction(b) && (b = b.call(a, c, h)), null != b.top && (n.top = b.top - h.top + g), null != b.left && (n.left = b.left - h.left + e), "using" in b ? b.using.call(a, n) : l.css(n)
         }
     }, m.fn.extend({
         offset: function (a) {
@@ -3146,7 +3146,7 @@ window.Modernizr = function (e, t, n) {
                 }) : t.apply(this, arguments)
             }
         }(e.fn.focus), disableSelection: function () {
-            var e = "onselectstart"in document.createElement("div") ? "selectstart" : "mousedown";
+            var e = "onselectstart" in document.createElement("div") ? "selectstart" : "mousedown";
             return function () {
                 return this.bind(e + ".ui-disableSelection", function (e) {
                     e.preventDefault()
@@ -4324,7 +4324,7 @@ window.Modernizr = function (e, t, n) {
         },
         _optionDatepicker: function (t, i, s) {
             var n, a, o, h, l = this._getInst(t);
-            return 2 === arguments.length && "string" == typeof i ? "defaults" === i ? e.extend({}, e.datepicker._defaults) : l ? "all" === i ? e.extend({}, l.settings) : this._get(l, i) : null : (n = i || {}, "string" == typeof i && (n = {}, n[i] = s), l && (this._curInst === l && this._hideDatepicker(), a = this._getDateDatepicker(t, !0), o = this._getMinMaxDate(l, "min"), h = this._getMinMaxDate(l, "max"), r(l.settings, n), null !== o && void 0 !== n.dateFormat && void 0 === n.minDate && (l.settings.minDate = this._formatDate(l, o)), null !== h && void 0 !== n.dateFormat && void 0 === n.maxDate && (l.settings.maxDate = this._formatDate(l, h)), "disabled"in n && (n.disabled ? this._disableDatepicker(t) : this._enableDatepicker(t)), this._attachments(e(t), l), this._autoSize(l), this._setDate(l, a), this._updateAlternate(l), this._updateDatepicker(l)), void 0)
+            return 2 === arguments.length && "string" == typeof i ? "defaults" === i ? e.extend({}, e.datepicker._defaults) : l ? "all" === i ? e.extend({}, l.settings) : this._get(l, i) : null : (n = i || {}, "string" == typeof i && (n = {}, n[i] = s), l && (this._curInst === l && this._hideDatepicker(), a = this._getDateDatepicker(t, !0), o = this._getMinMaxDate(l, "min"), h = this._getMinMaxDate(l, "max"), r(l.settings, n), null !== o && void 0 !== n.dateFormat && void 0 === n.minDate && (l.settings.minDate = this._formatDate(l, o)), null !== h && void 0 !== n.dateFormat && void 0 === n.maxDate && (l.settings.maxDate = this._formatDate(l, h)), "disabled" in n && (n.disabled ? this._disableDatepicker(t) : this._enableDatepicker(t)), this._attachments(e(t), l), this._autoSize(l), this._setDate(l, a), this._updateAlternate(l), this._updateDatepicker(l)), void 0)
         },
         _changeDatepicker: function (e, t, i) {
             this._optionDatepicker(e, t, i)
@@ -4932,7 +4932,7 @@ window.Modernizr = function (e, t, n) {
             "string" == typeof t && (t = t.split(" ")), e.isArray(t) && (t = {
                 left: +t[0],
                 top: +t[1] || 0
-            }), "left"in t && (this.offset.click.left = t.left + this.margins.left), "right"in t && (this.offset.click.left = this.helperProportions.width - t.right + this.margins.left), "top"in t && (this.offset.click.top = t.top + this.margins.top), "bottom"in t && (this.offset.click.top = this.helperProportions.height - t.bottom + this.margins.top)
+            }), "left" in t && (this.offset.click.left = t.left + this.margins.left), "right" in t && (this.offset.click.left = this.helperProportions.width - t.right + this.margins.left), "top" in t && (this.offset.click.top = t.top + this.margins.top), "bottom" in t && (this.offset.click.top = this.helperProportions.height - t.bottom + this.margins.top)
         },
         _isRootNode: function (e) {
             return /(html|body)/i.test(e.tagName) || e === this.document[0]
@@ -7377,7 +7377,7 @@ window.Modernizr = function (e, t, n) {
             "string" == typeof t && (t = t.split(" ")), e.isArray(t) && (t = {
                 left: +t[0],
                 top: +t[1] || 0
-            }), "left"in t && (this.offset.click.left = t.left + this.margins.left), "right"in t && (this.offset.click.left = this.helperProportions.width - t.right + this.margins.left), "top"in t && (this.offset.click.top = t.top + this.margins.top), "bottom"in t && (this.offset.click.top = this.helperProportions.height - t.bottom + this.margins.top)
+            }), "left" in t && (this.offset.click.left = t.left + this.margins.left), "right" in t && (this.offset.click.left = this.helperProportions.width - t.right + this.margins.left), "top" in t && (this.offset.click.top = t.top + this.margins.top), "bottom" in t && (this.offset.click.top = this.helperProportions.height - t.bottom + this.margins.top)
         },
         _getParentOffset: function () {
             this.offsetParent = this.helper.offsetParent();
@@ -9027,7 +9027,7 @@ window.Modernizr = function (e, t, n) {
     }, B = function () {
         var a = document.createElement("p").style, b = ["ms", "O", "Moz", "Webkit"];
         if (void 0 !== a.transition)return !0;
-        for (; b.length;)if (b.pop() + "Transition"in a)return !0;
+        for (; b.length;)if (b.pop() + "Transition" in a)return !0;
         return !1
     };
     t.prototype = {
@@ -9559,7 +9559,7 @@ window.Modernizr = function (e, t, n) {
         for (var s = 0, o = t.offsetHeight; t;)s += t.offsetTop, t = t.offsetParent;
         return "bottom" === e && (s += o), s
     }, i = function (e, s) {
-        "querySelector"in document && "addEventListener"in window && (this.visible = !1, this.options = {
+        "querySelector" in document && "addEventListener" in window && (this.visible = !1, this.options = {
             offset: 300,
             offsetSide: "top",
             classes: {clone: "headhesive", stick: "headhesive--stick", unstick: "headhesive--unstick"},
@@ -9617,7 +9617,7 @@ window.Modernizr = function (e, t, n) {
             return b && a("html").css("cursor", "pointer").on("click", a.noop), b
         }(), e = function () {
             var a = document.documentElement.style;
-            return "behavior"in a && "fill"in a && /iemobile/i.test(navigator.userAgent)
+            return "behavior" in a && "fill" in a && /iemobile/i.test(navigator.userAgent)
         }(), f = function () {
             return !!b.PointerEvent
         }(), g = function (a, b) {
