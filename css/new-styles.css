@@ -1,13 +1,13 @@
-h2 {
-
-}
-
 #sticky_catalog .catalog-list {
     display: none;
 }
 
 #sticky_catalog.show_catalog .catalog-list {
     display: block;
+}
+
+.fast-page span {
+color: grey;
 }
 
 h4.catalog-header {
@@ -24,32 +24,72 @@ h4.catalog-header {
 
 .checkbox {
     margin-left: 1px;
-
     border: 1px solid #dfe0e0;
     cursor: pointer;
 }
+.checkbox span{
+    color: grey;
+}
 
-.check-brand {
+.checkbox p {
+    margin:0;
+}
+
+.check p:hover {
+    color: black;
+    background-color: #E0E0E0;
+
+#interval-priсe {
+    padding: 10px;
+    width: 200px;
+}
+
+#check-brand {
     width:220px;
-    height:250px;
+    height: 163px;
     overflow:auto;
     border: 1px solid #dfe0e0;
     margin: 0;
 
 }
 
-.check-brand p:hover {
-    color: black;
-    background-color: coral;
+#check-brand p {
+    border: 1px solid #dfe0e0;
+    margin: 0;
 }
 
-.check-brand.p {
+#check-brand p:hover {
+    color: black;
+    background-color: #FFE4AD;
+}
+
+#check-brand.p {
     border: 1px solid #dfe0e0;
+}
+
+#interval-heat{
+    padding: 10px;
+    width: 200px;
+}
+
+.btn-group .dropdown-list {
+    display: none;
 }
 
 .dropdown-list {
     border: 1px solid #dfe0e0;
 }
+
+.search_line_form .dropdown-list {
+    display: none;
+    position: absolute;
+    z-index: 200;
+    background-color: white;
+    top: 12px;
+}
+
+.search_line_form .open .dropdown-list {
+    display: block;
 
 .button-show {
     width: 200px;
@@ -73,11 +113,11 @@ h4.catalog-header {
     display: block;
 }
 
-.article-tab a:hover  {
+.article-tab-cont a:hover  {
     text-decoration: none;
 }
 
-.article-tab a {
+.article-tab-cond a {
     color: #007488;
     border-bottom: 1px solid #007488;
 }
@@ -105,4 +145,7 @@ h4.catalog-header {
 }
 .search_line_form .btn-group li {
     list-style: none;
+}
+
+.widget-gallery {
 }

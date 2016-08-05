@@ -19,6 +19,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png"/>
     <link rel="stylesheet" href="css/new-styles.css"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
 </head>
 
 <body>
@@ -312,20 +313,22 @@
             <h2>Энергонезависимые газовые котлы</h2>
 
             <div class="checkbox">
+                <div class="check">
                 <form>
                     <p>Все (100)</p>
-                    <p><input type="checkbox" name="a" value="Настенные кондиционеры"> Настенные кондиционеры (100)</p>
-                    <p><input type="checkbox" name="a" value="Мульти сплит-системы"> Мульти сплит-системы (100)</p>
-                    <p><input type="checkbox" name="a" value="Кассетные кондиционеры"> Кассетные кондиционеры (100)</p>
-                    <p><input type="checkbox" name="a" value="Потолочные кондиционеры"> Потолочные кондиционеры (100)
-                    </p>
-                    <p><input type="checkbox" name="a" value="Канальные кондиционеры"> Канальные кондиционеры (100)</p>
-                    <p><input type="checkbox" name="a" value="Мультизональные системы"> Мультизональные системы (100)
+                    <p><input type="checkbox" name="a" value="Настенные кондиционеры"> Настенные кондиционеры <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Мульти сплит-системы"> Мульти сплит-системы <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Кассетные кондиционеры"> Кассетные кондиционеры <span>(100)</span>)</p>
+                    <p><input type="checkbox" name="a" value="Потолочные кондиционеры"> Потолочные кондиционеры <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Канальные кондиционеры"> Канальные кондиционеры <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Мультизональные системы"> Мультизональные системы <span>(100)</span>
                     </p>
                 </form>
             </div>
+            </div>
             <div class="filter">
                 <span>Подбор по параметрам</span>
+                <p>Цена (руб.):</p>
                 <div class="collapse in" id="interval-priсe">
                     <div id="price-slider"></div>
                 </div>
@@ -334,18 +337,18 @@
             <div class="checkbox">
                 <form>
                     <p> Производители:</p>
-                    <p><input type="checkbox" name="a" value="Все"> Все (100)</p>
-                    <p><input type="checkbox" name="a" value="Panasonic"> Panasonic (100)</p>
-                    <p><input type="checkbox" name="a" value="Midea"> Midea (100)</p>
-                    <p><input type="checkbox" name="a" value="Toshiba" checked> Toshiba (100)</p>
-                    <p><input type="checkbox" name="a" value="Panasonic" checked> Panasonic (100)</p>
-                    <p><input type="checkbox" name="a" value="Midea" checked> Midea (100)</p>
-                    <p><input type="checkbox" name="a" value="Toshiba"> Toshiba (100)</p>
-                    <p><input type="checkbox" name="a" value="Climate"> Climate (100)</p>
-                    <p><input type="checkbox" name="a" value="Neoclima"> Neoclima (100)</p>
+                    <p><input type="checkbox" name="a" value="Все"> Все <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Panasonic"> Panasonic <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Midea"> Midea <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Toshiba" checked> Toshiba <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Panasonic" checked> Panasonic <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Midea" checked> Midea <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Toshiba"> Toshiba <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Climate"> Climate <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Neoclima"> Neoclima <span>(100)</span></p>
                 </form>
                 <p>Выбрать серию</p>
-                <div class="check-brand">
+                <div id="check-brand">
                     <p><input type="checkbox" name="a" value="Бренд 1 серия 2"> Бренд 1 серия 2</p>
                     <p><input type="checkbox" name="a" value="Бренд 2 серия 1"> Бренд 2 серия 1</p>
                     <p><input type="checkbox" name="a" value="Бренд 2 серия 2"> Бренд 2 серия 2</p>
@@ -365,25 +368,32 @@
             </div>
             <div class="filter">
                 <span>Теплоотдача (кВт):</span>
-                <div class="collapse in" id="interval-prise"></div>
+                <div class="collapse in" id="interval-heat">
+                    <div id="heat-slider"></div>
+                </div>
             </div>
-            <div class="dropdown-list">
-                <p>Тип - выпадающий список</p>
-                <ul class="list">
-                    <li>Не важно</li>
-                    <li>Первый пункт списка</li>
-                    <li>Второй пункт списка</li>
-                    <li>Третий пункт списка</li>
-                    <li>Четвертый пункт списка</li>
-                    <li>Пятый пункт списка</li>
+            <div class="btn-group">
+                <button id="search_cat_group" class="btn btn-default btn-sm dropdown-toggle" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Не важно <i class="angle-bottom"></i>
+                </button>
+
+<p>Тип - Выпадающий список:</p>
+                <ul class="dropdown-list">
+                    <li value="Не важно">Не важно</li>
+                    <li value="Первый пункт списка">Первый пункт списка</li>
+                    <li value="Второй пункт списка">Второй пункт списка</li>
+                    <li value="Третий пункт списка">Третий пункт списка</li>
+                    <li value="Четвертый пункт списка">Четвертый пункт списка</li>
+                    <li value="Пятый пункт списка">Пятый пункт списка</li>
                 </ul>
             </div>
             <div class="checkbox">
                 <form>
                     <p> Подключение:</p>
                     <p><input type="checkbox" name="a" value="Все" checked> Все</p>
-                    <p><input type="checkbox" name="a" value="Боковая подводка"> Боковая подводка (100)</p>
-                    <p><input type="checkbox" name="a" value="Нижняя подводка"> Нижняя подводка (100)</p>
+                    <p><input type="checkbox" name="a" value="Боковая подводка"> Боковая подводка <span>(100)</span></p>
+                    <p><input type="checkbox" name="a" value="Нижняя подводка"> Нижняя подводка <span>(100)</span></p>
                 </form>
                 <div class="button-show">
                     Показать (150 товаров)
@@ -396,6 +406,10 @@
             <div class="widget sertificate">
                 <a href="javascript:void(0);"><img src="img/sert-1.jpg" alt="Sertificate"><a/>
                     <a href="javascript:void(0);">Смотреть все сертификаты</a>
+            </div>
+            <div class="widget gallery">
+                <a href="javascript:void(0);"><img src="img/gallery.png" alt="Gallery"><a/>
+                    <a href="javascript:void(0);">Фотогалерея наших работ</a>
             </div>
             <!--/noindex-->
         </div>
@@ -425,11 +439,6 @@
                     <div class="yandex_line">
                         Например, <span>Твердотопливный котел Boderust Logano S111-2</span>
                     </div>
-                    <div>
-                        <button class="btn btn-default btn-sm dropdown-toggle" type="button"
-                                data-toggle="dropdown">Hi
-                        </button>
-                    </div>
                 </div>
 
                 <div class="socials">
@@ -441,7 +450,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="fast-page">
-                Главная > Каталог > Кондиционеры > Мультизональные кондиционеры
+                <span>Главная > Каталог > Кондиционеры ></span> Мультизональные кондиционеры
             </div>
             <div class="products-sect clearfix">
 
@@ -497,7 +506,7 @@
                 </div>
             </div>
             <div class="widget banner banner-sm"></div>
-            <div class="products-sect prod-carousel clearfix">
+            <div class="products-sect clearfix">
                 <div class="tab-content">
                     <div role="tabpanel" data-toggle="tab" class="products tab active" id="AllLeadProd">
                         <div class="product">
@@ -932,20 +941,26 @@
                 СКРЫТЬ ВСЕ ТЕГИ
             </a>
         </div>
-        <div class="article-tab">
-            <h3>кондиционеры - создаем комфортный климат</h3>
-            <p>Необходимость в покупке кондиционера уже давно не является чем-то
-                особенным: каждому хочется чувствовать себя максимально комфортно
-                на работе и дома, поэтому все чаще системы системы кондиционирования
-                устанавливаются не только в офисных помещениях, но и в обычных
-                квартирах</p>
-            <p>
-                За последние годы это оборудование стало более доступным, появились
-                различные моделикондиционеров, купить которые можно без ущерба
-                для семейного или корпоративного бюджета. При этом вы всегда
-                являетесь полноправным хозяином климата, гда бы то ни было, одним
-                нажатием кнопки устанавливая подходящую температуру.
-            </p>
+        <div class="article-tab-cond">
+            <div class="article-tab">
+                <div class="cond-image">
+                    <img src="img/cond.png">
+                </div>
+
+                <h3>кондиционеры - создаем комфортный климат</h3>
+                <p>Необходимость в покупке кондиционера уже давно не является чем-то
+                    особенным: каждому хочется чувствовать себя максимально комфортно
+                    на работе и дома, поэтому все чаще системы системы кондиционирования
+                    устанавливаются не только в офисных помещениях, но и в обычных
+                    квартирах</p>
+                <p>
+                    За последние годы это оборудование стало более доступным, появились
+                    различные моделикондиционеров, купить которые можно без ущерба
+                    для семейного или корпоративного бюджета. При этом вы всегда
+                    являетесь полноправным хозяином климата, гда бы то ни было, одним
+                    нажатием кнопки устанавливая подходящую температуру.
+                </p>
+            </div>
             <h4>какой кондиционер купить?</h4>
             <p>Существует немало конфигураций кондиционеров (сплит-систем) с различными конструктивными и
                 функциональными особенностями. Выбор подходящей модели - занятие, требующее определенных
