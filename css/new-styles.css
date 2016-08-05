@@ -10,6 +10,10 @@
 color: grey;
 }
 
+.menu-img img {
+    margin: 5px;
+}
+
 h4.catalog-header {
     cursor: pointer;
 }

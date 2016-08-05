@@ -1250,6 +1250,23 @@ img {
 	border-bottom:1px dashed #999;
 	cursor:pointer;
 }
+
+.icon {
+    margin: 5px;
+}
+
+.icons {
+    margin: 5px;
+    float:left;
+    font-size:12px;
+    color:#999;
+}
+
+.icons span{
+    border-bottom:1px dashed #999;
+    cursor:pointer;
+}
+
 .search-line button {
     font-size: .875em;
     color: #ff9a00;
